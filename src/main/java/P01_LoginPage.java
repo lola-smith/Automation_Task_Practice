@@ -1,4 +1,5 @@
 import com.shaft.driver.SHAFT;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class P01_LoginPage {
@@ -12,6 +13,8 @@ public class P01_LoginPage {
 
 
     //methods
+    @Step("login with valid data")
+
     public P02_HomePage login(String username,String password){
         driver.element().type(emailInput,username).type(passowrdInput,password).click(loginBtn);
         return new P02_HomePage(driver);

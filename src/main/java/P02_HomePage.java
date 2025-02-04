@@ -1,4 +1,5 @@
 import com.shaft.driver.SHAFT;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class P02_HomePage {
@@ -11,8 +12,11 @@ public class P02_HomePage {
 
 
     //methods
-    public void navegatToProduct(){
+    @Step("navigate to product page")
+
+    public P03_ProductPage navegatToProduct(){
         driver.element().click(menListBtn).click(TshirtBtn);
+        return new P03_ProductPage(driver);
     }
 
 }

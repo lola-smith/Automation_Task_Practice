@@ -7,10 +7,10 @@ public class addProduct {
     SHAFT.GUI.WebDriver driver;
 
     SHAFT.TestData.JSON testJson;
-  @Test
+  @Test(description = "navegate to product and add item with price less then 1000")
   public void addProductToCart(){
       new P01_LoginPage(driver).login(testJson.getTestData("username"),testJson.getTestData("password"
-      )).navegatToProduct();
+      )).navegatToProduct().addProducts().productsVerifications();
   }
 
 
